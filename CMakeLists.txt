@@ -14,7 +14,7 @@
 #
 # @author Yan Pujante
 
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.17)
 
 # Using RE SDK version 4.2.0
 set(RE_SDK_VERSION 4.2.0)
