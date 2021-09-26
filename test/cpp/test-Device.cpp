@@ -199,4 +199,52 @@ TEST(Device, Outputs)
   ASSERT_EQ(a1o->fBuffer, MockAudioDevice::buffer(0.0, 0.0));
   ASSERT_EQ(a3o->fBuffer, MockAudioDevice::buffer(1.0, 2.0));
   ASSERT_EQ(b5o->fBuffer, MockAudioDevice::buffer(1.0, 2.0));
+
+  /*******************************////////////*******************************/
+  /*                             < NEXT FRAME >                             */
+  /*******************************////////////*******************************/
+  ////////// Action - turning soften off - switching to instrument mode //////////
+
+  tester.device().setBool("/custom_properties/prop_soften", false);
+  tester.device().setNum("/custom_properties/prop_mode", 2);
+
+  tester.nextFrame();
+
+  ////////// Checks - no output //////////
+  ASSERT_EQ(a1o->fBuffer, MockAudioDevice::buffer(0, 0));
+  ASSERT_EQ(a3o->fBuffer, MockAudioDevice::buffer(0, 0));
+  ASSERT_EQ(b5o->fBuffer, MockAudioDevice::buffer(0, 0));
+
+  /*******************************////////////*******************************/
+  /*                             < NEXT FRAME >                             */
+  /*******************************////////////*******************************/
+  ////////// Action - turning on A1 / A6 / B5 //////////
+
+  // 69 is A440 (middle A)
+  // A1 - C - 60 | A3 - D - 62 | B5 - A# - 70
+  tester.device().setNoteInEvents(MockDevice::NoteEvents{}.noteOn(60).noteOn(65).noteOn(70));
+
+  tester.nextFrame();
+
+  ////////// Checks - A1 / B5 should output //////////
+  ASSERT_EQ(a1o->fBuffer, MockAudioDevice::buffer(1.0, 2.0));
+  ASSERT_EQ(a3o->fBuffer, MockAudioDevice::buffer(0, 0));
+  ASSERT_EQ(b5o->fBuffer, MockAudioDevice::buffer(1.0, 2.0));
+
+  /*******************************////////////*******************************/
+  /*                             < NEXT FRAME >                             */
+  /*******************************////////////*******************************/
+  ////////// Action - turning on A3 off B5 //////////
+
+  // 69 is A440 (middle A)
+  // A1 - C - 60 | A3 - D - 62 | B5 - A# - 70
+  tester.device().setNoteInEvents(MockDevice::NoteEvents{}.noteOn(62).noteOff(70));
+
+  tester.nextFrame();
+
+  ////////// Checks - A1 / B5 should output //////////
+  ASSERT_EQ(a1o->fBuffer, MockAudioDevice::buffer(1.0, 2.0));
+  ASSERT_EQ(a3o->fBuffer, MockAudioDevice::buffer(1.0, 2.0));
+  ASSERT_EQ(b5o->fBuffer, MockAudioDevice::buffer(0, 0));
+
 }
