@@ -13,7 +13,7 @@ short_name = "AB12AudOut"
 
 product_id = "com.pongasoft.AB12AudioOutSwitch"
 manufacturer = "pongasoft"
-version_number = "1.0.0d1"
+version_number = "1.0.0d2"
 device_type = "helper"
 supports_patches = false
 accepts_notes = true
