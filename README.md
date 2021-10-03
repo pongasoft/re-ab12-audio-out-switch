@@ -72,7 +72,7 @@ If you want to change the code, run a debugger, etc... you can check the instruc
 Release notes
 -------------
 
-#### 1.0.0 - 2021/09/26
+#### 1.0.0 - 2021/10/03
 
 * First release. Requires Reason 10.1+.
 
