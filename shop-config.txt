@@ -1,0 +1,53 @@
+***************
+Logo:
+***************
+/Volumes/Development/local/pongasoft-www/images/re/AB12AudioOutSwitch/Icon_800x800.png
+
+Top Feature 1: Switch 12 audio output
+Top Feature 2: 3 control modes
+Top Feature 3: Like the Spider Audio Splitter with switches
+
+***************
+Summary:
+***************
+
+**A/B Test your audio!**
+
+The pongasoft A/B 12 Audio Out Switch is a 2U **FREE** utility that lets you split one input into 12 audio stereo outputs using various approaches (similar to the built-in Spider Audio Splitter but with switchable outputs).
+
+**3 control modes for the 12 outputs**
+
+- in single mode, only one output is active at a time and you can switch to another with a single click (or key on your keyboard).
+- in multiple mode, any combination of outputs can be active at a time (similar to the Solo concept).
+- in instrument mode, you control the switch as if you were playing an instrument. Perfect for quickly coming up with creative ideas or live performance.
+
+**External control**
+
+- 12 Gate In inputs lets you control the switch from another device
+- 12 Gate Out outputs lets you control other devices from the switch (ex: a Kong device).
+
+**A/B bank switching**
+
+The switch is split into 2 banks of outputs which can be independently turned on or off. A convenient control also lets you instantly toggle between the 2 banks, effectively implementing another level of switching.
+
+**Miscellaneous features**
+
+- Each switch can be labeled independently.
+- Each switch has its own volume control.
+- A soften toggle helps in eliminating clicks and pops that can occur during switching.
+
+Although designed as a utility, the switch can be used very creatively as well!
+
+***************
+Product Details
+***************
+
+
+**Usage**
+
+Check the [documentation](http://pongasoft.com/rack-extensions/AB12AudioOutSwitch.html "documentation") for instructions about how to use the switch.
+
+**Release Notes**
+
+- 1.0.0 - 2021/10/10: First release.
+
