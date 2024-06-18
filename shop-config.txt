@@ -3,6 +3,8 @@ Logo:
 ***************
 /Volumes/Development/local/pongasoft-www/images/re/AB12AudioOutSwitch/Icon_800x800.png
 
+Long title: 1 Input / 12 Outputs
+
 Top Feature 1: Switch 12 audio output
 Top Feature 2: 3 control modes
 Top Feature 3: Like the Spider Audio Splitter with switches
